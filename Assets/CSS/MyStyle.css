@@ -1,0 +1,40 @@
+h1{ text-align: center;}
+
+#Heading-section-top{
+    color: rgb(37, 165, 37);
+}
+
+.font-color-pink{
+    color: pink;
+}
+
+.font-size-10{
+    font-size: 5rem;
+}
+
+/* '!important' will put this style into the first show up  */
+.font-roboto{
+    font-family: "Roboto", sans-serif !important;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.font-text{
+    text-indent: 10%;
+}
+
+a {
+    color: green;
+}
+a:hover {
+    color: yellow;
+}
+
+a:link, a:visited {
+    background-color: #f44336;
+    color:white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration:none;
+    display:inline-block;
+}
