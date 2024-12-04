@@ -85,6 +85,14 @@ body {
     color: white;
 }
 
+/* Divider Line Styling */
+.divider {
+    height: 2px;/* Height of dividing line */
+    background-color: white; /* Color of dividing line */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Add shadow effect */
+    margin: 20px 0;/* Adjust the spacing between the dividing line and the upper and lower contents */
+}
+
 /* Main Content Styling */
 #main-content {
     margin-left: 260px;
