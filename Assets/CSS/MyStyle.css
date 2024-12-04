@@ -175,41 +175,45 @@ body {
     color: #2980b9;
 }
 
-/* Parallax Background */
-.parallax {
-    position: absolute;
+/* Background Image Styling */
+/* Styling the background image inside the parallax container */
+.background-image {
+    position: absolute; /* Make the image absolute inside its container */
     top: 0;
     left: 0;
-    width: 100%;
-    height: 350vh;
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../IMG/background.jpg');
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    z-index: -1;
-    filter: brightness(0.7); /* 进一步降低图片亮度 */
+    width: 100%; /* Ensure the image covers the full width */
+    height: 330vh; /* Ensure the image covers the full height */
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
+    filter: brightness(0.7); /* Adjust brightness for better contrast */
+    z-index: -1; /* Place the image behind other content */
 }
 
+/* Section Styling */
+/* Styling individual sections with semi-transparent background */
 section {
-    padding: 100px 20px;
-    background: rgba(255, 255, 255, 0.5); /* 增加透明度至0.7 */
-    margin-bottom: 50px;
-    border-radius: 15px; /* 边角更圆润 */
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2); /* 更柔和的阴影效果 */
-    backdrop-filter: blur(15px); /* 增加模糊程度 */
-    -webkit-backdrop-filter: blur(15px); /* Safari兼容 */
-    border: 1px solid rgba(255, 255, 255, 0.3); /* 添加细边框，提升视觉层次感 */
-    z-index: 1; /* 确保内容在背景图片之上 */
+    padding: 100px 20px; /* Add spacing around the content */
+    background: rgba(255, 255, 255, 0.5); /* Semi-transparent white background */
+    margin-bottom: 50px; /* Space between sections */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2); /* Add subtle shadow for depth */
+    backdrop-filter: blur(15px); /* Apply a blur effect to the background */
+    -webkit-backdrop-filter: blur(15px); /* Safari compatibility for blur effect */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Add a light border for better separation */
+    z-index: 1; /* Ensure sections are above the background */
 }
 
+/* Heading Styling */
+/* Styling for h1 and h2 elements */
 h1, h2 {
-    font-size: 2.5rem; /* 增大标题字体 */
-    color: #333; /* 深灰色文字 */
-    font-weight: bold;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* 添加轻微阴影提升可读性 */
+    font-size: 2.5rem; /* Increase heading font size */
+    color: #333; /* Dark gray color for text */
+    font-weight: bold; /* Make headings bold */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Add subtle shadow to enhance readability */
 }
 
+/* Paragraph Styling */
+/* Styling for paragraph text */
 p {
-    font-size: 1.2rem; /* 增加正文文字大小 */
-    color: #444; /* 使用稍深的灰色 */
+    font-size: 1.2rem; /* Increase paragraph font size */
+    color: #444; /* Slightly darker gray for better readability */
 }
