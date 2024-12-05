@@ -61,6 +61,69 @@ body {
     margin: 20px 0;/* Adjust the spacing between the dividing line and the upper and lower contents */
 }
 
+/* Sidebar Styling for Larger Screens */
+#sidebar {
+    min-width: 200px;
+    max-width: 250px;
+    background: linear-gradient(to bottom, rgba(44, 62, 80, 0.8), rgba(0, 0, 0, 1)); /* Gradient */
+    color: white;
+    height: 100vh;
+    padding: 20px;
+    position: fixed;
+    z-index: 2;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px); /* Blur effect for transparency */
+    -webkit-backdrop-filter: blur(5px); /* Safari compatibility */
+    transition: transform 0.3s ease-in-out; /* Smooth slide-in/out effect */
+}
+
+/* Hide Sidebar for Smaller Screens */
+@media (max-width: 768px) {
+    #sidebar {
+        transform: translateX(-100%); /* Move sidebar off-screen */
+    }
+
+    /* When sidebar is active (visible) */
+    #sidebar.active {
+        transform: translateX(0); /* Move sidebar back into view */
+    }
+
+    /* Adjust main content to take full width */
+    #main-content {
+        margin-left: 0; /* Remove space for sidebar */
+        padding: 20px; /* Add padding for spacing */
+    }
+}
+
+/* Sidebar Toggle Button */
+#sidebar-toggle {
+    display: none; /* Hide button on larger screens */
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background: #3498db; /* Button background color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    z-index: 3;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+/* Show the toggle button on smaller screens */
+@media (max-width: 768px) {
+    #sidebar-toggle {
+        display: block;
+    }
+}
+
+#sidebar-toggle:hover {
+    background: #2c3e50; /* Darker hover effect */
+}
+
+
 /* Skills Section */
 .skill-item h4 {
     font-weight: bold;
