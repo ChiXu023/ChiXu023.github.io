@@ -145,17 +145,22 @@ body {
 
 
 /* Background Image Styling */
-/* Styling the background image inside the parallax container */
+body {
+    margin: 0; /* Remove default body margin */
+    padding: 0; /* Remove default body padding */
+}
 .background-image {
-    position: absolute; /* Make the image absolute inside its container */
+    position: fixed; /* Keep the image fixed while scrolling */
     top: 0;
     left: 0;
     width: 100%; /* Ensure the image covers the full width */
-    height: 335vh; /* Ensure the image covers the full height */
-    object-fit: cover; /* Maintain aspect ratio and cover the container */
+    height: 100%; /* Ensure the image covers the full viewport height */
+    object-fit: cover; /* Maintain aspect ratio and cover the viewport */
     filter: brightness(0.7); /* Adjust brightness for better contrast */
     z-index: -1; /* Place the image behind other content */
 }
+
+
 
 /* Section Styling */
 /* Styling individual sections with semi-transparent background */
@@ -169,6 +174,10 @@ section {
     -webkit-backdrop-filter: blur(15px); /* Safari compatibility for blur effect */
     border: 1px solid rgba(255, 255, 255, 0.3); /* Add a light border for better separation */
     z-index: 1; /* Ensure sections are above the background */
+}
+/* Apply margin-bottom between headings (h1, h2) and their following paragraph */
+section h1, section h2 {
+    margin-bottom: 30px; /* Adds 30px space below all h1 and h2 within sections */
 }
 
 /* Heading Styling */
@@ -196,53 +205,11 @@ p {
     gap: 20px; /* Adds spacing between left and right sections */
     align-items: center; /* Vertically aligns items in the center */
 }
-
 /* Left text content */
 .text-content {
     flex: 1; /* Occupies equal space as the image container */
     max-width: 50%; /* Restricts the width to 50% of the parent container */
 }
-
-/* Right image container */
-.image-frame {
-    flex: 1; /* Occupies equal space as the text container */
-    max-width: 50%; /* Restricts the width to 50% of the parent container */
-    text-align: center; /* Centers the content inside the container */
-}
-
-.image-frame img {
-    width: 100%; /* Ensures the image scales to fit the container's width */
-    max-width: 300px; /* Sets a maximum width for the image */
-    height: auto; /* Maintains the aspect ratio of the image */
-    border-radius: 10px; /* Adds rounded corners to the image */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow effect */
-}
-
-/* Circle selector (navigation dots for the image frame) */
-.circle-selector {
-    display: flex; /* Aligns the circles horizontally */
-    justify-content: center; /* Centers the circles within the parent container */
-    margin-top: 15px; /* Adds spacing above the circle selector */
-}
-
-.circle {
-    width: 12px; /* Sets the width of each circle */
-    height: 12px; /* Sets the height of each circle */
-    border-radius: 50%; /* Makes the circles perfectly round */
-    background-color: #ddd; /* Default color of the circles */
-    margin: 0 5px; /* Adds spacing between the circles */
-    cursor: pointer; /* Changes the cursor to a pointer on hover */
-    transition: background-color 0.3s ease; /* Smooth transition for color changes */
-}
-
-.circle.active {
-    background-color: #007bff; /* Highlights the active circle in blue */
-}
-
-.circle:hover {
-    background-color: #0056b3; /* Changes color when hovered over */
-}
-
 /* Transparent effect for the education background section */
 .custom-section {
     background: rgba(255, 255, 255, 0.5); /* Adds a semi-transparent white background */
@@ -252,3 +219,26 @@ p {
     backdrop-filter: blur(5px); /* Applies a blur effect to the background */
     -webkit-backdrop-filter: blur(5px); /* Safari compatibility for the blur effect */
 }
+/* Specific to .custom-section Make the heading higher*/
+.custom-section h2 {
+    margin-bottom: 50px; /* Space below the heading */
+}
+/* Right Side: Image Frame Carousel Styling */
+.carousel {
+    width: 100%; /* Carousel container spans full width */
+    max-width: 800px; /* Optional: Restrict maximum width */
+    border-radius: 15px; /* Rounded corners */
+    margin: 0 auto; /* Center carousel horizontally */
+    overflow: hidden; /* Prevent content overflow */
+}
+.carousel-inner {
+    width: 100%;
+    height: 400px; /* Uniform height for all slides */
+}
+.carousel-inner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures image fills container while maintaining aspect ratio */
+}
+
+
